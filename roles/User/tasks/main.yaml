@@ -5,8 +5,8 @@
 
 - name: Setup the application
   ansible.builtin.import_role:
-  name: common
-  tasks_from: app-setup
+    name: common
+    tasks_from: app-setup
 
 - name: install the dependencies
   ansible.builtin.command: npm install
@@ -15,12 +15,12 @@
 
 - name: loading the schema
   ansible.builtin.import_role:
-  name: common
-  tasks_from: load-mongo-schema.yaml
+    name: common
+    tasks_from: load-mongo-schema.yaml
 
 - name: Copying the service and restarting the service
   ansible.builtin.import_role:
-  name: common
-  tasks_from: systemd-setup
+    name: common
+    tasks_from: systemd-setup
 
   
