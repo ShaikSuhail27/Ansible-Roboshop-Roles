@@ -1,0 +1,4 @@
+- name: copying the mongo repo to yum repository
+  ansible.builtin.copy:
+    src: mongodb.repo
+    dest: /etc/yum.repos.d/mongo.repo
