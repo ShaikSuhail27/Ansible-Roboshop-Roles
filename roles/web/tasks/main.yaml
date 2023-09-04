@@ -7,7 +7,7 @@
   ansible.builtin.service:
     name: nginx
     state: started
-    enabled: true
+    enabled: yes
 
 - name: Removing the html directory
   ansible.builtin.file:
@@ -37,7 +37,7 @@
   notify:
   - restarting the nginx service
   
-- name: restarting the nginx service
-  ansible.builtin.service:
-    name: nginx
-    state: restarted
+# - name: restarting the nginx service
+#   ansible.builtin.service:
+#     name: nginx
+#     state: restarted
