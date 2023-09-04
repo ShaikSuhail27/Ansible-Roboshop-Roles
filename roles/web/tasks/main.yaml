@@ -32,7 +32,7 @@
 
 - name: copying the Roboshop conf file for creating reverse proxy
   ansible.builtin.template:
-    src: Roboshop.conf
+    src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf 
   
 - name: restarting the nginx service
