@@ -12,7 +12,7 @@
     name: redis
     state: installed
 
-- name: Remote connections to the redis server
+- name: Remote connections to the Redis server
   ansible.builtin.replace:
     path: /etc/redis.conf
     regexp: '127.0.0.1'
